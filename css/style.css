@@ -67,6 +67,7 @@ a {
     height: 20px;
     z-index: 3;
     margin-right: 20px;
+    cursor: pointer;
   }
   .header_burger span {
     position: absolute;
@@ -74,6 +75,8 @@ a {
     width: 100%;
     height: 2px;
     top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
   .header_burger::before,
   .header_burger::after {
@@ -82,6 +85,8 @@ a {
     background-color: #000000;
     width: 100%;
     height: 2px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
   .header_burger::before {
     top: 0;
@@ -91,14 +96,16 @@ a {
   }
   .header_menu {
     position: fixed;
-    top: 0;
+    top: -100%;
     right: 0;
     height: 100%;
     width: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(#5C88C9), color-stop(171.97%, rgba(36, 111, 225, 0.48)));
-    background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.48) 171.97%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#5C88C9), color-stop(171.97%, rgba(36, 111, 225, 0.77)));
+    background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.77) 171.97%);
     z-index: 2;
     padding: 100px 20px 0px 0px;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
   }
   .header_body {
     height: 50px;
@@ -119,6 +126,30 @@ a {
   }
   .header_list li {
     margin-bottom: 30px;
+  }
+  .header_burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header_burger.active::after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    bottom: 9px;
+  }
+  .header_burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header_burger.active span,
+  .header_burger.active::after,
+  .header_burger.active::before {
+    content: '';
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  .header_menu.active {
+    top: 0;
   }
 }
 
@@ -187,6 +218,8 @@ a {
           justify-content: space-between;
   position: relative;
   z-index: 3;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header .header_body .header_menu .header_list li {
@@ -233,8 +266,165 @@ a {
   width: 100%;
   height: 100%;
   background-color: #fff;
+  opacity: 1;
   top: 0;
   left: 0;
   z-index: 3;
+}
+
+.main__batton {
+  color: #FFFFFF;
+  border-radius: 59px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #5c88c9), color-stop(48%, rgba(36, 111, 225, 0.48)));
+  background: linear-gradient(#5c88c9 100%, rgba(36, 111, 225, 0.48) 48%);
+  padding: 20px 41px;
+  font-weight: 400;
+  font-size: 24px;
+  border: none;
+}
+
+.top__section {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(197, 234, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(197, 234, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 80px;
+}
+
+.top__container {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top__container .top__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.top__container .top__info .top__img {
+  width: 100%;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top__container .top__info .top__info-box {
+  margin-top: 100px;
+}
+
+.top__container .top__info .top__info-box h1 {
+  font-family: 'Raleway';
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 1.4;
+  letter-spacing: 7%;
+  color: #3a3f65;
+}
+
+.top__container .top__info .top__info-box h1 span {
+  color: #5C88C9;
+}
+
+.top__container .top__info .top__info-box p {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: 7%;
+  color: #000000;
+  opacity: 70%;
+  max-width: 570px;
+  margin-top: 10px;
+}
+
+.top__container .top__info .top__info-box button {
+  margin-top: 20px;
+  position: relative;
+}
+
+.top__container .top__info .top__info-box button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+          transform: translateX(-4em) skewX(-45deg);
+}
+
+.top__container .top__info .top__info-box button:hover:before {
+  -webkit-animation: moveLight 1s;
+          animation: moveLight 1s;
+}
+
+@-webkit-keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+@keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+.top__container .top__info .top__info-box .top__futer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.top__container .top__info .top__info-box .top__futer-info .futer__box-info {
+  padding-right: 80px;
+}
+
+.top__container .top__info .top__info-box .top__futer-info .futer__box-info h3 {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: 7%;
+  color: #5C88C9;
+}
+
+.top__container .top__info .top__info-box .top__futer-info .futer__box-info p {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 7%;
+  color: #000000;
+  opacity: 70%;
 }
 /*# sourceMappingURL=style.css.map */

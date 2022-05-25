@@ -7,6 +7,7 @@
         height: 20px;
         z-index: 3;
         margin-right: 20px;
+        cursor: pointer;
     }
     .header_burger span{
         position: absolute;
@@ -14,6 +15,7 @@
         width: 100%;
         height: 2px;
         top: 9px;
+        transition: all 0.3s ease 0s;
     }
     .header_burger::before,
     .header_burger::after{
@@ -22,6 +24,7 @@
         background-color: #000000;
         width: 100%;
         height: 2px;
+        transition: all 0.3s ease 0s;
     }
     .header_burger::before{
         top: 0;
@@ -31,14 +34,14 @@
     }
     .header_menu{
         position: fixed;
-        top: 0;
+        top: -100%;
         right: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.48) 171.97%);
+        background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.77) 171.97%);
         z-index: 2;
         padding: 100px 20px 0px 0px;
-        
+        transition: all 0.7s ease 0s;
         
     }
     .header_body{
@@ -54,6 +57,27 @@
         li{
             margin-bottom: 30px;
         }
+    }
+    .header_burger.active span{
+        transform: scale(0);
+    }
+    .header_burger.active::after{
+        transform: rotate(135deg);
+        bottom: 9px;
+    }
+    .header_burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header_burger.active span,
+    .header_burger.active::after,
+    .header_burger.active::before{
+        content: '';
+        transition: all 0.7s ease 0s;
+    }
+    .header_menu.active{
+        top: 0;
+        
     }
 } 
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
