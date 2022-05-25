@@ -70,13 +70,8 @@ button {
   font-weight: normal;
 }
 
-h1 {
-  font-family: 'Raleway';
-  font-size: 25px;
-}
-
-h2 {
-  font-family: 'Montserrat';
-  font-size: 25px;
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
 }
 /*# sourceMappingURL=style.css.map */
