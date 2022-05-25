@@ -1,0 +1,25 @@
+@import 'common/common';
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")format("truetype");
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf")format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url("../fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("../fonts/Raleway-VariableFont_wght.ttf")format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1{
+    font-family: 'Raleway';
+    font-size: 25px;
+}
+h2{
+    font-family: 'Montserrat';
+    font-size: 25px;
+}
