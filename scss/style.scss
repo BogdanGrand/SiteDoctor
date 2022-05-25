@@ -21,3 +21,80 @@
     margin: 0 auto;
     max-width: 1170px;
 }
+a{
+    color: #000000;
+}
+
+// header
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .header_body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        position: relative;
+        
+        .header_logotype{
+            position: relative;
+            z-index: 3;
+            margin-left: 20px;
+        }
+        .header_menu{
+            
+            .header_list{
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                z-index: 3;
+                li{
+                    margin-left: 60px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    /* identical to box height */
+
+                    text-align: center;
+                    text-transform: capitalize;
+
+                    color: #000000;
+                }
+            }
+        }
+        .selection_languages{
+            position: relative;
+            z-index: 3;
+            display: flex;
+            gap: 15px;
+            
+            .lang_box{
+                display: flex;
+                align-items: center;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 1px solid black;
+            }
+        }
+    }
+}
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
+}
+
