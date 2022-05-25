@@ -145,6 +145,7 @@ a{
                 & span{
                     color: #5C88C9;
                 }
+                max-width: 700px;
             }
             & p{
                 font-family: 'Raleway';
@@ -205,7 +206,8 @@ a{
                         line-height: 15px;
                         letter-spacing: 7%;
                         color:#000000;
-                        opacity: 70%; 
+                        opacity: 70%;
+                        
                     }
                 }
             }

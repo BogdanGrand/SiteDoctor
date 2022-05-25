@@ -330,6 +330,7 @@ a {
   line-height: 1.4;
   letter-spacing: 7%;
   color: #3a3f65;
+  max-width: 700px;
 }
 
 .top__container .top__info .top__info-box h1 span {
