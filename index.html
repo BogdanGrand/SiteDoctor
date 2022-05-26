@@ -12,42 +12,73 @@
 </head>
 <body>
     <div class="wrapper">
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="header_body">
+                    <a href="" class="header_logotype lang" key="">Логотип</a>
+                    
+                    <nav class="header_menu">
+                        <ul class="header_list">
+                            <li><a href="" class="header_link lang" key="about">Про лікаря</a></li>
+                            <li><a href="" class="header_link lang" key="promotions">Акції</a></li>
+                            <li><a href="" class="header_link lang" key="service">Послуги</a></li>
+                            <li><a href="" class="header_link lang" key="gallary">Фотогалерея</a></li>
+                            <li><a href="" class="header_link lang" key="contact">Контакти</a></li>
+                        </ul>
+                    </nav>
+                    <div class="selection_languages">
+                        <a href="#ua" class="lang_box translate" id="ua">
+                            <img src="img/header/ukraine.jpg" alt="">
+                            <p>UA</p>
+                        </a>
+                        <a href="#en" class="lang_box translate" id="en">
+                            <img src="img/header/eng.png" alt="">
+                            <p>EN</p>
+                        </a>
+                    </div>
+                    <div class="header_burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
         <!-- top section -->
         <section class="top__section">
-            <header class="header">
-                <div class="container">
-                    
-                </div>
-            </header>
-    
             <div class="container top__container" style="background-image: url('img/backg/backg__elements.png');">
                 <div class="top__info">
     
                     <div class="top__info-box">
-                        <h1 class = "lng-title">Шкурко<br><span>Сергій Олексійович</span></h1>
-                        <p class = "lng-desc">Лікар дерматовенеролог, дитячий дерматолог, трихолог, косметолог. Спеціалст ультразвукової діагностики</p>
-                        <button class = "main__batton lng-button">Записатися</button>
+                        <h1 class = "lng-title lang" key="person">Шкурко</h1>
+                        <h2 class = "lng-title lang"> Сергій Олексійович</h2>
+                        <p class = "lng-desc lang" key="about the doctor">Лікар дерматовенеролог, дитячий дерматолог, трихолог, косметолог. Спеціалст ультразвукової діагностики</p>
+                        <button class = "main__batton lng-button lang" key="sing up">Записатися</button>
                         <div class="top__futer-info">
                             <div class="futer__box-info">
-                                <h3 class = "lng-title">3 роки</h3>
-                                <p class = "lng-desc">Професійного<br> досвіду</p> 
+                                <h3 class = "lng-title lang" key="expiriance">3 роки</h3>
+                                <p class = "lng-desc lang" key="underdesc exp">Професійного<br> досвіду</p> 
                             </div>
                             <div class="futer__box-info">
-                                <h3 class = "lng-title">300+</h3>
-                                <p class = "lng-desc">Задоволенних<br> клієнтів</p>
+                                <h3 class = "lng-title lang" key="">300+</h3>
+                                <p class = "lng-desc lang" key="satifsy">Задоволенних<br> клієнтів</p>
                             </div>
                             <div class="futer__box-info">
-                                <h3 class = "lng-title">70</h3>
-                                <p class = "lng-desc">Збілшених<br> губ</p>
+                                <h3 class = "lng-title lang" key="">70</h3>
+                                <p class = "lng-desc lang" key="working">Збільшених<br> губ</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="img__wrapper"><img src="img/photo/doctor__img.png" alt="doctorPhoto" class="top__img"></div>
                 </div>
-    
             </div>
         </section>
+
     </div>
+
+
+    <script src="script.js"></script>
+    <script src="lang.js"></script>
+    <script src="jquery.min.js"></script>
 </body>
 </html>

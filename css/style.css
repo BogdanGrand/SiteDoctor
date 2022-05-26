@@ -54,6 +54,109 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+  .header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .header_burger span {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header_burger::before,
+  .header_burger::after {
+    content: '';
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header_burger::before {
+    top: 0;
+  }
+  .header_burger::after {
+    bottom: 0;
+  }
+  .header_menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5C88C9), color-stop(171.97%, rgba(36, 111, 225, 0.77)));
+    background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.77) 171.97%);
+    z-index: 2;
+    padding: 100px 20px 0px 0px;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  .header_body {
+    height: 50px;
+  }
+  .header_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: relative;
+    z-index: 3;
+  }
+  .header_list li {
+    margin-bottom: 30px;
+  }
+  .header_burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header_burger.active::after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    bottom: 9px;
+  }
+  .header_burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header_burger.active span,
+  .header_burger.active::after,
+  .header_burger.active::before {
+    content: '';
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  .header_menu.active {
+    top: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
@@ -75,8 +178,99 @@ button {
   max-width: 1170px;
 }
 
+a {
+  color: #000000;
+}
+
 .header {
-  height: 100px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header .header_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+  position: relative;
+}
+
+.header .header_body .header_logotype {
+  position: relative;
+  z-index: 3;
+  margin-left: 20px;
+}
+
+.header .header_body .header_menu .header_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header .header_body .header_menu .header_list li {
+  margin-left: 60px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.header .header_body .selection_languages {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.header .header_body .selection_languages .lang_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header_body .selection_languages img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .main__batton {
@@ -93,6 +287,7 @@ button {
 .top__section {
   background: -webkit-gradient(linear, left top, right top, from(rgba(197, 234, 255, 0.3)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, rgba(197, 234, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 80px;
 }
 
 .top__container {
@@ -107,9 +302,22 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.top__container .top__info .top__img {
+  width: 100%;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .top__container .top__info .top__info-box {
@@ -125,8 +333,13 @@ button {
   color: #3a3f65;
 }
 
-.top__container .top__info .top__info-box h1 span {
+.top__container .top__info .top__info-box h2 {
   color: #5C88C9;
+  font-family: 'Raleway';
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 1.4;
+  letter-spacing: 7%;
 }
 
 .top__container .top__info .top__info-box p {
