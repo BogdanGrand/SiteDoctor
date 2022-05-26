@@ -321,10 +321,20 @@ a {
 }
 
 .top__container .top__info .top__info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 100px;
 }
 
-.top__container .top__info .top__info-box h1 {
+.top__container .top__info .top__info-box .name_person .firstname {
   font-family: 'Raleway';
   font-weight: 900;
   font-size: 58px;
@@ -333,7 +343,7 @@ a {
   color: #3a3f65;
 }
 
-.top__container .top__info .top__info-box h2 {
+.top__container .top__info .top__info-box .name_person h2 {
   color: #5C88C9;
   font-family: 'Raleway';
   font-weight: 900;
@@ -357,6 +367,7 @@ a {
 .top__container .top__info .top__info-box button {
   margin-top: 20px;
   position: relative;
+  max-width: 218px;
 }
 
 .top__container .top__info .top__info-box button::before {
@@ -439,7 +450,7 @@ a {
 }
 
 .img__wrapper::before {
-  content: ' ';
+  content: '';
   position: absolute;
   top: 70px;
   right: -50px;

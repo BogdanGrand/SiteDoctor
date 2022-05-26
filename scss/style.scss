@@ -135,22 +135,27 @@ a{
             justify-content: center;
         }
         .top__info-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             margin-top: 100px;
-            & h1{
-                font-family: 'Raleway';
-                font-weight: 900;
-                font-size: 58px;
-                line-height: 1.4;
-                letter-spacing: 7%;
-                color:rgb(58, 63, 101);
-            }
-            & h2{
-                color: #5C88C9;
-                font-family: 'Raleway';
-                font-weight: 900;
-                font-size: 58px;
-                line-height: 1.4;
-                letter-spacing: 7%;
+            .name_person{
+                & .firstname{
+                    font-family: 'Raleway';
+                    font-weight: 900;
+                    font-size: 58px;
+                    line-height: 1.4;
+                    letter-spacing: 7%;
+                    color:rgb(58, 63, 101);
+                }
+                & h2{
+                    color: #5C88C9;
+                    font-family: 'Raleway';
+                    font-weight: 900;
+                    font-size: 58px;
+                    line-height: 1.4;
+                    letter-spacing: 7%;
+                }
             }
             & p{
                 font-family: 'Raleway';
@@ -166,6 +171,7 @@ a{
             & button{
                 margin-top: 20px;
                 position: relative;
+                max-width: 218px;
             }
             & button::before{
                 content: ""; 
@@ -224,7 +230,7 @@ a{
 }
 
 .img__wrapper::before{
-    content: ' ';
+    content: '';
     position: absolute;
     top: 70px; 
     right: -50px;
