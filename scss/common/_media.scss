@@ -79,18 +79,27 @@
         top: 0;
         
     }
+    .img__wrapper{
+        transform: translateX(35%);
+    }
 } 
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media only screen and (min-width: 600px) {
-
+    // .img__wrapper{
+    //     transform: translateX(40%);
+    // }
 } 
 /* Medium devices (landscape tablets, 768px and up) */ 
 @media only screen and (min-width: 768px) {
-
+    // .img__wrapper{
+    //     transform: translateX(50%);
+    // }
 } 
 /* Large devices (laptops/desktops, 992px and up) */ 
 @media only screen and (min-width: 992px) {
-
+    // .img__wrapper{
+    //     transform: translateX(70%);
+    // }
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
 @media only screen and (min-width: 1200px) {

@@ -151,6 +151,10 @@ a {
   .header_menu.active {
     top: 0;
   }
+  .img__wrapper {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -175,11 +179,72 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1200px;
+  padding: 15px;
+}
+
+.button {
+  margin-top: 30px;
+  left: 0;
+  max-width: 218px;
+  color: #FFFFFF;
+  border-radius: 59px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #5c88c9), color-stop(48%, rgba(36, 111, 225, 0.48)));
+  background: linear-gradient(#5c88c9 100%, rgba(36, 111, 225, 0.48) 48%);
+  padding: 15px 41px;
+  font-weight: 400;
+  font-size: 24px;
+  border: none;
+  position: relative;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+          transform: translateX(-4em) skewX(-45deg);
+}
+
+.button:hover:before {
+  -webkit-animation: moveLight 1s;
+          animation: moveLight 1s;
+}
+
+@-webkit-keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+@keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
 }
 
 a {
   color: #000000;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --side-small: 26;
+  --side-big:36;
 }
 
 .header {
@@ -200,7 +265,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px;
+  height: 50px;
   position: relative;
 }
 
@@ -321,23 +386,13 @@ a {
 }
 
 .top__container .top__info .top__info-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 100px;
 }
 
 .top__container .top__info .top__info-box .name_person .firstname {
   font-family: 'Raleway';
   font-weight: 900;
-  font-size: 58px;
+  font-size: calc(var(--index)*3);
   line-height: 1.4;
   letter-spacing: 7%;
   color: #3a3f65;
@@ -347,7 +402,7 @@ a {
   color: #5C88C9;
   font-family: 'Raleway';
   font-weight: 900;
-  font-size: 58px;
+  font-size: calc(var(--index)*3);
   line-height: 1.4;
   letter-spacing: 7%;
 }
@@ -355,7 +410,7 @@ a {
 .top__container .top__info .top__info-box p {
   font-family: 'Raleway';
   font-weight: 400;
-  font-size: 21px;
+  font-size: calc(var(--index)*1.2);
   line-height: 30px;
   letter-spacing: 7%;
   color: #000000;
@@ -385,17 +440,6 @@ a {
 .top__container .top__info .top__info-box button:hover:before {
   -webkit-animation: moveLight 1s;
           animation: moveLight 1s;
-}
-
-@-webkit-keyframes moveLight {
-  from {
-    -webkit-transform: translateX(-4em) skewX(-45deg);
-            transform: translateX(-4em) skewX(-45deg);
-  }
-  to {
-    -webkit-transform: translateX(10em) skewX(-45deg);
-            transform: translateX(10em) skewX(-45deg);
-  }
 }
 
 @keyframes moveLight {
@@ -429,7 +473,7 @@ a {
 .top__container .top__info .top__info-box .top__futer-info .futer__box-info h3 {
   font-family: 'Raleway';
   font-weight: 800;
-  font-size: 24px;
+  font-size: calc(var(--index)*1.5);
   line-height: 1.1;
   letter-spacing: 7%;
   color: #5C88C9;
@@ -439,6 +483,7 @@ a {
   font-family: 'Raleway';
   font-weight: 400;
   font-size: 14px;
+  font-size: calc(var(--index)*.9);
   line-height: 15px;
   letter-spacing: 7%;
   color: #000000;
@@ -449,19 +494,177 @@ a {
   position: relative;
 }
 
-.img__wrapper::before {
-  content: '';
+.top__container .top__info .img__wrapper .top__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: calc(var(--index)*var(--side-small));
+  height: calc(var(--index)*var(--side-big));
+}
+
+.second__section {
+  background-color: #F1FAFE;
+}
+
+.second__section h2 {
+  color: #000000;
+  font-size: calc(var(--index)*2);
+  font-family: 'Raleway';
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.second__section .swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.second__section .swiper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second__section .swiper .swiper-slide .swiper-box {
+  position: relative;
+}
+
+.second__section .swiper .swiper-slide .swiper-box p {
   position: absolute;
-  top: 70px;
-  right: -50px;
-  width: 530px;
-  height: 530px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #5c88c9), color-stop(48%, rgba(36, 111, 225, 0.48)));
-  background: linear-gradient(#5c88c9 100%, rgba(36, 111, 225, 0.48) 48%);
-  z-index: -1;
-  opacity: 60%;
-  -webkit-box-shadow: 5px 5px 23px 50px rgba(0, 0, 0, 0.11);
-  box-shadow: 5px 5px 23px 50px rgba(0, 0, 0, 0.11);
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: calc(var(--index)*.9);
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+.second__section .swiper .swiper-slide .swiper-box span {
+  font-weight: 600;
+}
+
+.second__section .swiper .swiper-slide img {
+  border-radius: 5%;
+}
+
+.second__section .swiper .swiper-slide .img__wrapper {
+  position: relative;
+  border-radius: 5%;
+  -webkit-box-shadow: 6px 9px 8px 1px rgba(0, 0, 0, 0.68);
+  box-shadow: 6px 9px 8px 1px rgba(0, 0, 0, 0.68);
+}
+
+.second__section .swiper .swiper-slide .img__wrapper::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 10%;
+  background-color: #000000;
+  z-index: 2;
+  border-radius: 5%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.second__section .swiper .swiper-slide .img__wrapper::before {
+  content: '';
+  top: 0;
+  left: 10px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url("../img/elements/Group 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.second__section .swiper .swiper-slide .img__wrapper:hover:after {
+  opacity: 70%;
+}
+
+.second__section .swiper .swiper-slide .img__wrapper:hover:before {
+  width: 140px;
+  height: 140px;
+  left: 20px;
+}
+
+.second__section .swiper .swiper-slide .main__batton {
+  margin-top: 30px;
+  right: 0;
+}
+
+.second__section .swiper .swiper-slide .main__batton button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+          transform: translateX(-4em) skewX(-45deg);
+}
+
+.second__section .swiper .swiper-slide .main__batton button:hover:before {
+  -webkit-animation: moveLight 1s;
+          animation: moveLight 1s;
+}
+
+@keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+.second__section .button {
+  margin-top: 30px;
+  right: 0;
+}
+
+.second__section .button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+          transform: translateX(-4em) skewX(-45deg);
+}
+
+.second__section .button button:hover:before {
+  -webkit-animation: moveLight 1s;
+          animation: moveLight 1s;
+}
+
+@keyframes moveLight {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
