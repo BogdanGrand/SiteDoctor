@@ -201,6 +201,7 @@ a{
                 font-size: calc(var(--index)*1.2);
                 line-height: 30px;
                 letter-spacing: 7%;
+                line-height: 33px;
                 color:#000000;
                 opacity: 70%; 
                 max-width: 570px;
@@ -253,9 +254,10 @@ a{
                         font-weight: 400;
                         font-size: 14px;
                         font-size: calc(var(--index)*.9);
-                        line-height: 15px;
+                        line-height: 23px;
                         letter-spacing: 7%;
                         color:#000000;
+                        
                         opacity: 70%;
                         
                     }
@@ -458,11 +460,13 @@ padding-bottom: 40px;
     background-color: #FFFFFF;
     align-items: center;
     border-radius: 10px;
+    max-width: 570px;
     
 }
 .services_img {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    align-self: baseline;
      img{
          border-top-left-radius: 10px;
          border-bottom-left-radius: 10px;
@@ -508,5 +512,7 @@ padding-bottom: 40px;
     &:hover{
         color: white;
         background-color: #000000;
+        transition: 1s ease-out;
     }
 }
+@import 'common/media';
