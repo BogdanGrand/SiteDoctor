@@ -157,6 +157,19 @@ a {
   }
 }
 
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .swiper-button-prev {
+    left: 20px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
@@ -175,6 +188,13 @@ a {
   src: url("../fonts/Raleway-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -423,6 +443,7 @@ a {
   margin-top: 20px;
   position: relative;
   max-width: 218px;
+  overflow: hidden;
 }
 
 .top__container .top__info .top__info-box button::before {

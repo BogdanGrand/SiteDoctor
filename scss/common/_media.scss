@@ -82,7 +82,19 @@
     .img__wrapper{
         transform: translateX(35%);
     }
+    
 } 
+@media (max-width: 760px) {
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+.swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+}
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media only screen and (min-width: 600px) {
     // .img__wrapper{

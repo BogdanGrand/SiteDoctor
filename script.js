@@ -9,22 +9,23 @@ burger.addEventListener('click', function(){
 
 //swiper
 var swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
-    direction: getDirection(),
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+  slidesPerView: 3,
+  // direction: getDirection(),
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop:true,
+  breakpoints:{
+    320:{
+      slidesPerView: 1,
     },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      },
+    480:{
+      slidesPerView: 2,
     },
-  });
-
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-    return direction;
+    992:{
+      slidesPerView: 3,
+    }
   }
+  
+});
