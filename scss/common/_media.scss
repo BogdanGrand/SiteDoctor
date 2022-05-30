@@ -105,3 +105,40 @@
 @media only screen and (min-width: 1200px) {
 
 }
+
+
+@media only screen and (max-width: 1168px) {
+    .services__main__text{
+        text-align: center;
+    }
+    .services__inner{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+  
+} 
+
+@media only screen and (max-width: 600px) {
+    .services__main__text{
+        text-align: center;
+    }
+    .services__img{
+        
+        padding-left: 20px;
+    }
+    .services_about{
+        padding-left: 0;
+        padding-right: 40px;
+    }
+    .services__item{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .services__about__btn{
+        margin-left: 0;
+    }
+  
+} 
