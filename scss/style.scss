@@ -207,6 +207,7 @@ a{
                 font-size: calc(var(--index)*1.2);
                 line-height: 30px;
                 letter-spacing: 7%;
+                line-height: 33px;
                 color:#000000;
                 opacity: 70%; 
                 max-width: 570px;
@@ -261,9 +262,10 @@ a{
                         font-weight: 400;
                         font-size: 14px;
                         font-size: calc(var(--index)*.9);
-                        line-height: 15px;
+                        line-height: 23px;
                         letter-spacing: 7%;
                         color:#000000;
+                        
                         opacity: 70%;
                         
                     }
@@ -418,3 +420,96 @@ a{
         }
     }  
 }
+<<<<<<< HEAD
+=======
+
+
+// SERVICES
+
+.services{
+    background-color: #F1FAFE;
+}
+
+.services__main__text{
+    
+font-family: 'Raleway';
+font-style: normal;
+font-weight:600;
+font-size: 48px;
+line-height: 56px;
+text-align: left;
+letter-spacing: 0.05em;
+text-transform: capitalize;
+color: #000000;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+.services__inner {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+  
+   
+}
+.services__item {
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 570px;
+    
+}
+.services_img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-self: baseline;
+     img{
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+     }
+}
+.services_about {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.serveces__about__text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+    padding-bottom: 17px;
+    
+
+}
+.services__about__article {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 146.4%;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 46px;
+}
+.services__about__btn {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 59px;
+    padding: 6px 12px;
+    background-color: #FFFFFF;
+    margin-left: 58px;
+    &:hover{
+        color: white;
+        background-color: #000000;
+        transition: 1s ease-out;
+    }
+}
+@import 'common/media';
+>>>>>>> e490bc471b17d876b1524b97827e9c915282c39c
