@@ -473,7 +473,7 @@ a {
   font-weight: 900;
   font-size: calc(var(--index)*3);
   line-height: 1.4;
-  letter-spacing: 7%;
+  letter-spacing: 4%;
 }
 
 .top__container .top__info .top__info-box p {
