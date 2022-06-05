@@ -103,6 +103,25 @@
         align-items: center;
         width: 100%;
         flex-direction: column-reverse;
+        .top__info-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+            .name_person{
+                width: 300px;
+                text-align: center;
+            }
+            .top__futer-info{
+                align-items: center;
+                justify-content: center;
+                padding-right: 0;
+                .futer__box-info{
+                    padding-right: 20px;
+                }
+            }
+        }
     }
 
 } 
