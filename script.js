@@ -26,6 +26,11 @@ var swiper = new Swiper('.swiper', {
     992:{
       slidesPerView: 3,
     }
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
   }
   
 });

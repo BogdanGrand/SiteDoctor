@@ -79,37 +79,38 @@
         top: 0;
         
     }
-    .img__wrapper{
-        transform: translateX(35%);
-    }
     
 } 
-@media (max-width: 760px) {
-    .swiper-button-next {
-        right: 20px;
-        transform: rotate(90deg);
-    }
 
-.swiper-button-prev {
-    left: 20px;
-    transform: rotate(90deg);
-}
-}
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media only screen and (min-width: 600px) {
     
 } 
 /* Medium devices (landscape tablets, 768px and up) */ 
-@media only screen and (min-width: 768px) {
-    
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: none;
+    }
 } 
 /* Large devices (laptops/desktops, 992px and up) */ 
-@media only screen and (min-width: 992px) {
-   
+@media only screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+    .top__info{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (max-width: 1200px) {
+   .container{
+       max-width: 970px;
+   }
 }
 
 
@@ -122,7 +123,15 @@
         justify-content: center;
 
     }
+    .services__about__btn{
+        margin-left: 0;
+    }
   
+
+    // .top__info{
+    //     flex-wrap: wrap-reverse;
+    // }
+    
 } 
 
 @media only screen and (max-width: 600px) {
@@ -144,7 +153,11 @@
 
     }
     .services__about__btn{
-        margin-left: 0;
+         margin-left: 0;
+         margin-bottom: 7px;
     }
-  
+  .services__about__article{
+      max-width: 300px;
+      padding-bottom: 22px;
+  }
 } 

@@ -29,9 +29,8 @@ html,
 }
 
 .button{
-    margin-top: 30px;
-    left: 0;
     max-width: 218px;
+    right: 0;
     color: #FFFFFF;
     border-radius: 59px;
     background: linear-gradient(rgba(92, 136, 201, 1)100%,rgba(36, 111, 225, 0.48)48%);
@@ -40,6 +39,7 @@ html,
     font-size: 24px;
     border: none;  
     position: relative;
+    overflow: hidden;
     &::before{
         content: ""; 
         position: absolute; 
@@ -173,7 +173,7 @@ a{
         display: flex;
         justify-content: space-between;
         // align-items: flex-start;
-        flex-wrap: wrap-reverse;
+        
         .top__img{
             width: 100%;
             max-width: 400px;
@@ -198,7 +198,7 @@ a{
                     font-weight: 900;
                     font-size: calc(var(--index)*3);
                     line-height: 1.4;
-                    letter-spacing: 7%;
+                    letter-spacing: 4%;
                 }
             }
             & p{
@@ -274,6 +274,7 @@ a{
         }
         .img__wrapper{
             position: relative;
+            
             .top__img{
                 object-fit: cover;
                 width:calc(var(--index)*var(--side-small));
@@ -282,6 +283,7 @@ a{
         }
     }
 }
+
 
 
 //second section
@@ -297,7 +299,9 @@ a{
     .swiper {
         width: 100%;
         height: 100%;
+        max-height: 700px;
         margin-top: 50px;
+        overflow-x: hidden;
         .swiper-slide{
             display: flex;
             justify-content: space-around;
@@ -363,62 +367,17 @@ a{
                 height: 140px;
                 left: 20px;
             }
-            .main__batton{
-                margin-top: 30px;
-                right: 0;
-                & button::before{
-                    content: ""; 
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    width: 3em; 
-                    height: 100%; 
-                    background-color: rgba(255, 255, 255, 0.3);
-                    transform: translateX(-4em) skewX(-45deg);         
-                }
-                & button:hover:before {
-                    animation: moveLight 1s;
-                }
-                
-                @keyframes moveLight {
-                from {
-                    transform: translateX(-4em) skewX(-45deg);
-                }
-                to {
-                    transform: translateX(10em) skewX(-45deg);
-                }
-                }
-            }  
-      }
-      
+        }
+        .swiper-pagination{
+            bottom: -30px;
+            right: 0;
+            z-index:10;
+        }
     }
-    
-    .button{
-        margin-top: 30px;
-        right: 0;
-        & button::before{
-            content: ""; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 3em; 
-            height: 100%; 
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translateX(-4em) skewX(-45deg);         
-        }
-        & button:hover:before {
-            animation: moveLight 1s;
-        }
-        
-        @keyframes moveLight {
-        from {
-            transform: translateX(-4em) skewX(-45deg);
-        }
-        to {
-            transform: translateX(10em) skewX(-45deg);
-        }
-        }
-    }  
+    button{
+        right: 0px; 
+        margin-top:30px;
+     }
 }
 
 
