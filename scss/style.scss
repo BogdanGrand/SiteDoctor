@@ -512,3 +512,271 @@ padding-bottom: 40px;
 }
 @import 'common/media';
 
+// Work with form (by Rozzya666)
+
+.form_section {
+    background-color: #EDF7FD;
+}
+.modal_window_form{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    .container_modal_form{
+        // margin: 15px 50px;
+        max-width: 669px;
+        .modal_header{
+            margin: 15px 50px;
+            ul{
+                display: flex;
+                gap: 15px;
+            }
+            
+        }
+        .welcome_form{
+            text-align: center;
+            margin: 35px 0 50px;
+            h2{
+                font-style: normal;
+                @include hstylylize(500,32px,39px,#000000)
+                
+            }
+            h3{
+                font-family: "Raleway";
+                font-style: normal;
+                @include hstylylize(400,21px,145.4%,rgba(0, 0, 0, 0.7))
+
+            }
+        }
+        .main_form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 100px;
+            input{
+                border: none;
+                outline: none;
+                padding: 6px 3px;
+                text-transform: capitalize;
+                font-family: 'Raleway';
+                font-style: normal;
+                width: 220px;
+                margin-right: 20px;
+                border-bottom: 1px solid #000;
+                @include hstylylize(200,15px,18px,black);
+                transition: all 0.7s ease 0s;
+                // width: 230px;
+            }
+            input:focus{
+                box-shadow: 0 0 15px red;;
+                border-bottom: none;
+            }
+        }
+
+        .footer_form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 50px;
+            .dot_slider{
+                width: 36px;
+                position: relative;
+                // .dota{
+                //     width: 9px;
+                //     height: 9px;
+                //     border-radius: 50%;
+                //     background-color: black;
+                // }
+                
+            }
+            .btn_general{
+                font-family: 'Raleway';
+                font-style: normal;
+                border-radius: 20px;
+                border: 1px solid black;
+                padding: 5px 25px;
+                cursor: pointer;
+            }
+        }
+    }
+    .g-maps{
+        background-color: aqua;
+        border: 1px solid black;
+        max-width: 500px;
+    }
+}
+.dota{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: black;
+}
+.dota::after, .dota::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+.dota::before{
+    content: '';
+    right: 0;
+}
+.dota::after{
+    content: '';
+    right: 36%;
+}
+.firstscreen{
+    display: block;
+    transition: all 0.5s ease-out;
+    .modal_header{
+        ul{
+            li:nth-child(1n){
+                font-weight: 600;
+            }
+            li:nth-child(3n){
+                font-weight: 400;
+            }
+            li:nth-child(5n){
+                font-weight: 400;
+            }
+        }
+    }
+}
+.secondscreen{
+    display: none;
+    .modal_header{
+        ul{
+            li:nth-child(1n){
+                font-weight: 400;
+            }
+            li:nth-child(3n){
+                font-weight: 600;
+            }
+            li:nth-child(5n){
+                font-weight: 400;
+            }
+        }
+    }
+    .btns_functions{
+        display: flex;
+        gap: 20px;
+    }
+    .dota::after{
+        content: '';
+        background-color: #000000;
+    }
+    .dota{
+        background-color: red;
+    }
+}
+.thirdscreen{
+    display: none;
+    ul{
+        li:nth-child(1n){
+            font-weight: 400;
+        }
+        li:nth-child(3n){
+            font-weight: 400;
+        }
+        li:nth-child(5n){
+            font-weight: 600;
+        }
+    }
+    .dota::before{
+        content: '';
+        background-color: #000000;
+    }
+    .dota::after{
+        content: '';
+        background-color: red;
+    }
+    .dota{
+        background-color: red;
+    }
+    
+}
+.modal_form{
+    position: relative;
+}
+.secondscreen_form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    input{
+        border: none;
+        outline: none;
+        padding: 6px 3px;
+        text-transform: capitalize;
+        font-family: 'Raleway';
+        font-style: normal;
+        // width: 220px;
+        // margin-right: 20px;
+        border-bottom: 1px solid #000;
+        @include hstylylize(200,15px,18px,black);
+        transition: all 0.7s ease 0s;
+        width: 230px;
+    }
+    input:focus{
+        box-shadow: 0 0 15px red;;
+        border-bottom: none;
+    }
+}
+.secondscreen_welcome{
+            text-align: center;
+            margin: 35px 0 10px;
+            h2{
+                font-style: normal;
+                @include hstylylize(500,32px,39px,#000000)
+                
+            }
+            h3{
+                font-family: "Raleway";
+                font-style: normal;
+                @include hstylylize(400,21px,145.4%,rgba(0, 0, 0, 0.7))
+
+            }
+}
+.thirdscreen_welcome{
+            text-align: center;
+            margin: 70px 0 170px;
+            h2{
+                font-style: normal;
+                @include hstylylize(500,32px,39px,#000000)
+                
+            }
+            h3{
+                font-family: "Raleway";
+                font-style: normal;
+                @include hstylylize(400,21px,145.4%,rgba(0, 0, 0, 0.7))
+
+            }
+}
+
+.form_services{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 20px 115px;
+        input{
+            display: flex;
+            border-radius: 25px;
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.7s ease 0s;
+        }
+        input:checked{
+            background-color: black;
+            color: white;
+        }
+}
+._error{
+    box-shadow: 0 0 50px blue;
+}

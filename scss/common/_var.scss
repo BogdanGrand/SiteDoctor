@@ -1,0 +1,6 @@
+@mixin hstylylize ($fw, $fs, $lh, $c) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $c;
+}
