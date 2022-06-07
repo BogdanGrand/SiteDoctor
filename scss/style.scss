@@ -29,9 +29,8 @@ html,
 }
 
 .button{
-    margin-top: 30px;
-    left: 0;
     max-width: 218px;
+    right: 0;
     color: #FFFFFF;
     border-radius: 59px;
     background: linear-gradient(rgba(92, 136, 201, 1)100%,rgba(36, 111, 225, 0.48)48%);
@@ -40,6 +39,7 @@ html,
     font-size: 24px;
     border: none;  
     position: relative;
+    overflow: hidden;
     &::before{
         content: ""; 
         position: absolute; 
@@ -173,10 +173,9 @@ a{
         display: flex;
         justify-content: space-between;
         // align-items: flex-start;
-        flex-wrap: wrap-reverse;
+        
         .top__img{
             width: 100%;
-            max-width: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -184,6 +183,7 @@ a{
         .top__info-box{
             margin-top: 100px;
             .name_person{
+                width: 600px;
                 & .firstname{
                     font-family: 'Raleway';
                     font-weight: 900;
@@ -210,7 +210,7 @@ a{
                 line-height: 33px;
                 color:#000000;
                 opacity: 70%; 
-                max-width: 570px;
+                // max-width: 570px;
                 margin-top: 10px;
             }
             & button{
@@ -248,7 +248,7 @@ a{
                 align-items: center;
                 margin-top: 100px;
                 .futer__box-info{
-                    padding-right: 80px; 
+                    padding-right: 80px ;
                     h3{
                         font-family: 'Raleway';
                         font-weight: 800;
@@ -274,6 +274,7 @@ a{
         }
         .img__wrapper{
             position: relative;
+            
             .top__img{
                 object-fit: cover;
                 width:calc(var(--index)*var(--side-small));
@@ -284,11 +285,12 @@ a{
 }
 
 
+
 //second section
 .second__section{
     background-color: #F1FAFE;
     h2{
-        color: #000000;
+        color: #283D6A;
         font-size: calc(var(--index)*2);
         font-family: 'Raleway';
         font-weight: 600;
@@ -297,7 +299,9 @@ a{
     .swiper {
         width: 100%;
         height: 100%;
+        max-height: 700px;
         margin-top: 50px;
+        overflow-x: hidden;
         .swiper-slide{
             display: flex;
             justify-content: space-around;
@@ -363,62 +367,17 @@ a{
                 height: 140px;
                 left: 20px;
             }
-            .main__batton{
-                margin-top: 30px;
-                right: 0;
-                & button::before{
-                    content: ""; 
-                    position: absolute; 
-                    top: 0; 
-                    left: 0; 
-                    width: 3em; 
-                    height: 100%; 
-                    background-color: rgba(255, 255, 255, 0.3);
-                    transform: translateX(-4em) skewX(-45deg);         
-                }
-                & button:hover:before {
-                    animation: moveLight 1s;
-                }
-                
-                @keyframes moveLight {
-                from {
-                    transform: translateX(-4em) skewX(-45deg);
-                }
-                to {
-                    transform: translateX(10em) skewX(-45deg);
-                }
-                }
-            }  
-      }
-      
+        }
+        .swiper-pagination{
+            bottom: -30px;
+            right: 0;
+            z-index:10;
+        }
     }
-    
-    .button{
-        margin-top: 30px;
-        right: 0;
-        & button::before{
-            content: ""; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 3em; 
-            height: 100%; 
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translateX(-4em) skewX(-45deg);         
-        }
-        & button:hover:before {
-            animation: moveLight 1s;
-        }
-        
-        @keyframes moveLight {
-        from {
-            transform: translateX(-4em) skewX(-45deg);
-        }
-        to {
-            transform: translateX(10em) skewX(-45deg);
-        }
-        }
-    }  
+    button{
+        right: 0px; 
+        margin-top:30px;
+     }
 }
 
 
@@ -439,7 +398,7 @@ line-height: 56px;
 text-align: left;
 letter-spacing: 0.05em;
 text-transform: capitalize;
-color: #000000;
+color: #283D6A;
 padding-top: 40px;
 padding-bottom: 40px;
 }
@@ -511,6 +470,7 @@ padding-bottom: 40px;
     }
 }
 @import 'common/media';
+
 
 // Work with form (by Rozzya666)
 
@@ -780,3 +740,96 @@ padding-bottom: 40px;
 ._error{
     box-shadow: 0 0 50px blue;
 }
+
+// gallery section
+.gallery{
+    background: linear-gradient( #BBD6EA 100% #EEF8FD 100%);
+    & h2{
+        color: #283D6A;
+        font-size: calc(var(--index)*2);
+        font-family: 'Raleway';
+        font-weight: 600;
+        letter-spacing: 6%;
+        margin-top: 50px;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+        margin-top: 40px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        .otstup{
+            height: 20px;
+        }
+        .swiper-scrollbar{
+        }
+        & .swiper-scrollbar-drag{
+            cursor: pointer;
+            background-color: #FFFFFF;
+        }
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        height: 80%;
+        width: 100%;
+      }
+
+      .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2%;
+      }
+}
+

@@ -79,43 +79,57 @@
         top: 0;
         
     }
-    .img__wrapper{
-        transform: translateX(35%);
-    }
     
 } 
-@media (max-width: 760px) {
-    .swiper-button-next {
-        right: 20px;
-        transform: rotate(90deg);
-    }
 
-.swiper-button-prev {
-    left: 20px;
-    transform: rotate(90deg);
-}
-}
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media only screen and (min-width: 600px) {
-    // .img__wrapper{
-    //     transform: translateX(40%);
-    // }
+    
 } 
 /* Medium devices (landscape tablets, 768px and up) */ 
-@media only screen and (min-width: 768px) {
-    // .img__wrapper{
-    //     transform: translateX(50%);
-    // }
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: none;
+    }
 } 
 /* Large devices (laptops/desktops, 992px and up) */ 
-@media only screen and (min-width: 992px) {
-    // .img__wrapper{
-    //     transform: translateX(70%);
-    // }
+@media only screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+    .top__info{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column-reverse;
+        .top__info-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 300px;
+            .name_person{
+                width: 300px;
+                text-align: center;
+            }
+            .top__futer-info{
+                align-items: center;
+                justify-content: center;
+                padding-right: 0;
+                .futer__box-info{
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (max-width: 1200px) {
+   .container{
+       max-width: 970px;
+   }
 }
 
 
@@ -132,7 +146,11 @@
         margin-left: 0;
     }
   
-  
+
+    // .top__info{
+    //     flex-wrap: wrap-reverse;
+    // }
+    
 } 
 
 @media only screen and (max-width: 600px) {
