@@ -131,7 +131,7 @@ a{
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
-                border: 1px solid black;
+                border: 1px solid whitesmoke;
             }
         }
     }
@@ -492,7 +492,7 @@ padding-bottom: 40px;
         height: 100%;
         margin-top: 40px;
       }
-
+      
       .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -526,8 +526,7 @@ padding-bottom: 40px;
         .otstup{
             height: 20px;
         }
-        .swiper-scrollbar{
-        }
+       
         & .swiper-scrollbar-drag{
             cursor: pointer;
             background-color: #FFFFFF;
@@ -567,7 +566,7 @@ padding-bottom: 40px;
         border-radius: 2%;
       }
 }
-// Work with form (by Rozzya666)
+// Work with form (by Rozzya666(he has small dick))
 .form_section {
     background-color: #EDF7FD;
 }
@@ -834,3 +833,108 @@ padding-bottom: 40px;
 ._error{
     box-shadow: 0 0 50px blue;
 }
+// ВІДГУКИ
+.swiper-response{
+    border-radius: 25px;
+}
+.responses{
+    background: linear-gradient(180deg, #F1FAFE 0%, #BAD5EA 100%);
+   
+}
+.response__article{
+    min-width: 320px;
+    max-width: 607px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 23px;
+    color: #000000;
+    padding-bottom: 19px;
+    max-height: 500px;
+    text-overflow: ellipsis;
+ 
+}
+.user_response_name{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+    
+
+
+}
+.crapka{
+    padding-top: 42px;
+    padding-bottom: 27px;
+}
+.response__wrapper{
+    background-color: rgba(185, 228, 255, 0.5);
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 25px;
+    
+}
+.res_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img--source{
+    display: flex;
+    flex-direction: column;
+    
+}
+.userLink{
+    
+    text-decoration: underline;
+}
+// Swiper responses
+.swiper--res{
+    width: 83%;
+    height: 50%;
+}
+.innerUserInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 28px;
+    
+}
+
+
+.slide--res{
+    border-radius: 25px;
+}
+
+.btn-res{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #5C88C9 0%, rgba(36, 111, 225, 0.48) 171.97%);
+    border-radius: 59px;
+    border: none;
+    padding: 13px 33px;
+    &:hover{
+        
+        background-color: white;
+        transition: 0.5s ease-in-out;
+    }
+    }
+
+.button-slide{
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+@import 'common/media';
+
+
+

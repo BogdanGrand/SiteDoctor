@@ -35,3 +35,4 @@ var swiper = new Swiper('.swiper-sale', {
   
 });
 
+console.log(`Дивишся код,ахах лох))`);
