@@ -244,11 +244,11 @@ a{
             }
             .top__futer-info{
                 display: flex;
-                justify-content:flex-start;
+                justify-content:space-between;
                 align-items: center;
                 margin-top: 100px;
                 .futer__box-info{
-                    padding-right: 80px ;
+                    // padding-right: 80px ;
                     h3{
                         font-family: 'Raleway';
                         font-weight: 800;
@@ -368,10 +368,16 @@ a{
                 left: 20px;
             }
         }
+        .padding{
+            height: 50px;
+        }
         .swiper-pagination{
-            bottom: -30px;
+            bottom: 0px;
             right: 0;
             z-index:10;
+            .swiper-pagination-bullet{
+                background-color: #000000;
+            }
         }
     }
     button{

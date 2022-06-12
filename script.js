@@ -31,6 +31,10 @@ var swiper = new Swiper('.swiper-sale', {
     el: '.swiper-pagination',
     clickable: true,
     dynamicBullets: true,
+  },
+  autoplay: {
+    deley:4000,
+    disableOnInteraction: true
   }
   
 });
