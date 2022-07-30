@@ -180,3 +180,26 @@
       padding-bottom: 22px;
   }
 } 
+
+@media only screen and (max-width: 775px){
+    .img--source img{
+        display: none;
+    }
+    .response__wrapper{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .img--source img{
+        display: none;
+    }
+    .response__wrapper{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .innerUserInfo{
+        flex-wrap: wrap;
+    }
+}
