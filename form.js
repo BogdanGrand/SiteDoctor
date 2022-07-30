@@ -57,7 +57,7 @@ form.onsubmit = function () {
     } else {
         inputPhone.classList.remove('error');
     }
-
+    // Bro check
     // if(!inputCheckbox.checked) {
     //     console.log('checkbox not checked');
     //     inputCheckbox.classList.add('error');
