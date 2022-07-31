@@ -218,7 +218,7 @@
                 </div>
                 
             <div class="button-slide">
-                <button onclick=" window.open('https://goo.gl/maps/EfVGQnoC4ipjhcmU7', '_blank'); return false;" class="btn-res" accesskey="" type="button">Детальніше у Google</button>
+                <button" class="btn-res" accesskey="" type="button">Детальніше у Google</button>
             </div>
             </div>
          </div>
@@ -289,120 +289,52 @@
         <!-- form section -->
         <section class="form_section">
             <div class="container">
-                <div class="modal_form firstscreen">
-                    <div class="modal_window_form">
-                        <div class="container_modal_form">
-                            <div class="modal_header">
-                                <ul>
-                                    <li class="lang" key="forma">Форма</li>
-                                    <li>></li>
-                                    <li class="lang" key="choose">Оберіть послугу</li>
-                                    <li>></li>
-                                    <li class="lang" key="get_quesion">Прийняття запиту</li>
-                                </ul>
-                            </div>
-                            <div class="welcome_form">
-                                <h2 class="sign_in_form lang" key="sign_in">Записатися на прийом</h2>
-                                <h3 class="pleasure_sing_in lang" key="fill_form">Будь ласка, заповніть форму</h3>
-                            </div>
-                            <form class="main_form" action="#">
-                                <input id="name" class="_req" type="text" placeholder="Ім'я" >
-                                <input id="surname" class="_req" type="text" placeholder="Прізвище">
-                                <input id="number_phone" class="_req" type="number" placeholder="Телефон">
-                                <input id="email" class="_req _email" type="email" placeholder="Пошта">
-                            </form>
-                            <div class="footer_form">
-                                <div class="dot_slider">
-                                    <div class="dota"></div>
+                <form class="formsubm" name="formmailer" action="">
+                    <div class="modal_form firstscreen">
+                        <div class="modal_window_form">
+                            <div class="container_modal_form">
+                                <div class="welcome_form">
+                                    <h2 class="sign_in_form lang" key="sign_in">Записатися на прийом</h2>
+                                    <h3 class="pleasure_sing_in lang" key="fill_form">Будь ласка, заповніть форму</h3>
                                 </div>
-                                <button type="submit" class="btn_general btn-next lang" key="next">Далі</button>
+                                <div class="main_form">
+                                    <ul class="form_services">
+                                        <li class="block_form_input">
+                                            <input type="checkbox" class="check_serv" name="" id="cosmetology">
+                                            <label class="checkbox_label" for="cosmetology">Косметологія</label>
+                                        </li>
+                                        <li class="block_form_input">
+                                            <input type="checkbox" class="check_serv" name="" id="dermatology">
+                                            <label class="checkbox_label" for="dermatology">Деромотологія</label>
+                                        </li>
+                                        <li class="block_form_input">
+                                            <input type="checkbox" class="check_serv" name="" id="trihology">
+                                            <label class="checkbox_label" for="trihology">Трихологія</label>
+                                        </li>
+                                        <li class="block_form_input">
+                                            <input type="checkbox" class="check_serv" name="" id="venerology">
+                                            <label class="checkbox_label" for="venerology">Венерологія</label>
+                                        </li>
+                                    </ul>
+                                    <input id="name" class="req nameform" type="text" placeholder="Ім'я" >
+                                    <input id="number_phone" class="req phoneform" type="number" placeholder="Телефон">
+                                    <input id="time" class="req timeform" type="datetime-local" placeholder="Телефон">
+                                    <input id="email" class="req _email emailform" type="email" placeholder="Пошта">
+                                </div>
+                                <div class="footer_form">
+                                    <div class="dot_slider">
+                                        <div class="dota"></div>
+                                    </div>
+                                    <button type="submit" class="btn_general btn-next lang" key="next">Далі</button>
+                                </div>
                             </div>
+                            <div class="g-maps"></div>
                         </div>
-                        <div class="g-maps"></div>
                     </div>
-                </div>
-                <div class="modal_form secondscreen">
-                    <div class="modal_window_form">
-                        <div class="container_modal_form">
-                            <div class="modal_header">
-                                <ul>
-                                    <li class="lang" key="forma">Форма</li>
-                                    <li>></li>
-                                    <li class="lang" key="choose">Оберіть послугу</li>
-                                    <li>></li>
-                                    <li class="lang" key="get_quesion">Прийняття запиту</li>
-                                </ul>
-                            </div>
-                            <div class="secondscreen_welcome">
-                                <h2 class="sign_in_form lang" key="sign_in">Записатися на прийом</h2>
-                                <h3 class="pleasure_sing_in lang" key="choose_service">Будь ласка, оберіть послугу</h3>
-                            </div>
-                            <ul class="form_services">
-                                <li>
-                                    <input type="checkbox" class="_req" name="" id="">
-                                    <div>Трихологія</div>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="_req" name="" id="">
-                                    <div>Трихологія</div>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="_req" name="" id="">
-                                    <div>Трихологія</div>
-                                </li>
-                                <li>
-                                    <input type="checkbox" class="_req" name="" id="">
-                                    <div>Трихологія</div>
-                                </li>
-                            </ul>
-                            <form class="secondscreen_form" action="">
-                                <input id="name" type="datetime-local" class="_req" placeholder="Оберіть дату" >
-                                <input id="surname" type="text" class="_req" placeholder="Ваш коментар">
-
-                            </form>
-                            <div class="footer_form">
-                                <div class="dot_slider">
-                                    <div class="dota"></div>
-                                </div>
-                                <div class="btns_functions">
-                                    <div class="btn_general btn-back lang" key="back">Назад</div>
-                                    <div class="btn_general btn-next2 lang" key="next">Далі</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g-maps"></div>
-                    </div>
-                </div>
-                <div class="modal_form thirdscreen">
-                    <div class="modal_window_form">
-                        <div class="container_modal_form">
-                            <div class="modal_header">
-                                <ul>
-                                    <li class="lang" key="forma">Форма</li>
-                                    <li>></li>
-                                    <li class="lang" key="choose">Оберіть послугу</li>
-                                    <li>></li>
-                                    <li class="lang" key="get_quesion">Прийняття запиту</li>
-                                </ul>
-                            </div>
-                            <div class="thirdscreen_welcome">
-                                <h2 class="sign_in_form lang" key="thankyou">Дякуємо!</h2>
-                                <h3 class="pleasure_sing_in lang" key="check_call">Ваш запит успішно надіслано, з Вами зв'яжуться найближчим часом</h3>
-                                <h3 class="pleasure_sing_in lang" key="goodluck">Гарного дня!</h3>
-                            </div>  
-                            <div class="footer_form">
-                                <div class="dot_slider">
-                                    <div class="dota"></div>
-                                </div>
-                                <button type="submit" class="btn_general btn-back2 lang" key="back">Назад</button>
-                                <!-- <div class="btn_general btn-back2 lang" key="back">Назад</div> -->
-                            </div>
-                        </div>
-                        <div class="g-maps"></div>
-                    </div>
-                </div>
+                </form>
             </div>
         </section>
+
         <footer class = "footer">
             <div class="container">
                 <div class="footer__inners">
@@ -485,6 +417,75 @@
                 </div>
             </div>
         </footer>
+
+        <section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer_nav">
+                        <div class="row_service">
+                            <h3>Меню</h3>
+                            <ul>
+                                <a href="#"><li>
+                                    Про лікаря
+                                </li></a>
+                                <a href="#"><li>
+                                    Акції
+                                </li></a>
+                                <a href="#"><li>
+                                    Послуги
+                                </li></a>
+                                <a href="#">
+                                    <li>Відгуки</li>
+                                </a>
+                                <a href="#"><li>
+                                    Фотогалерея
+                                </li></a>
+                                <a href="#"><li>
+                                    Контакти
+                                </li></a>
+                            </ul>
+                        </div>
+                        <div class="row_service">
+                            <h3>Послуги</h3>
+                            <ul>
+                                <a href="#"><li>
+                                    Косметологія
+                                </li></a>
+                                <a href="#"><li>
+                                    Дерматологія
+                                </li></a>
+                                <a href="#"><li>
+                                    Трихологія
+                                </li></a>
+                                <a href="#"><li>
+                                    Венерологія
+                                </li></a>
+                            </ul>
+                        </div>
+                        <div class="row_service">
+                            <h3>Про лікаря</h3>
+                            <ul>
+                                <a href="#"><li>
+                                    Сертифікати
+                                </li></a>
+                                <a href="#"><li>
+                                    Освіта
+                                </li></a>
+                                <a href="#"><li>
+                                    Досвід
+                                </li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_feedback">
+                        <div class="row_service">
+                            <p>Зв'яжіться з нами</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
     </div>
 
     

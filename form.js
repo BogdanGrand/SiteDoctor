@@ -1,115 +1,70 @@
-const btnNext1 = document.querySelector('.btn-next')
-const bntBack1 = document.querySelector('.btn-back')
-const bntBack2 = document.querySelector('.btn-back2')
-const btnNext2 = document.querySelector('.btn-next2')
-const firstScreen = document.querySelector('.firstscreen')
-const secondScreen = document.querySelector('.secondscreen')
-const thirdScreen = document.querySelector('.thirdscreen')
-btnNext1.addEventListener('click', function() {
-    firstScreen.style.display = 'none'
-    if(firstScreen.style.display = 'none'){
-        secondScreen.style.transition = 'all 2s'
-        secondScreen.style.display = 'block'
-    }else{
-        console.log('Error')
-    }
-})
-bntBack1.addEventListener('click', function() {
-    firstScreen.style.display = 'block'
-    secondScreen.style.display = 'none'
-})
-btnNext2.addEventListener('click', function() {
-    secondScreen.style.display = 'none'
-    thirdScreen.style.display = 'block'
-})
-bntBack2.addEventListener('click', function() {
-    thirdScreen.style.display = 'none'
-    secondScreen.style.display = 'block'
+
+let form = document.querySelector('.formsubm'),
+    formInputs = document.querySelectorAll('.req'),
+    inputEmail = document.querySelector('.emailform'),
+    inputPhone = document.querySelector('.phoneform'),
+    inputCheckbox = document.querySelectorAll('.check_serv');
+let blockInput = document.querySelectorAll('.block_form_input')
+inputCheckbox.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        elem.closest('.block_form_input').classList.toggle('active_li')
+    })
 })
 
-// class Component {
-//     constructor(selector) {
-//         this.$el = document.querySelector(selector)
-//     }
-//     hide() {
-//         this.$el.style.display = 'none'
-//     }
-//     show() {
-//         this.$el.style.display = 'block'
-//     }
-//     trans() {
-//         transition.begin(this.$el, ["1s", "ease-in-out"]);
-//     }
-// }
+function validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
-// class Slider extends Component {
-//     constructor(options) {
-//         super(options.selector)
-//         this.$el.addEventListener('click', function() {
-//                 this.$el.style.display = 'none'
-//                 this.$el.trans()
-//                 this.$el.style.display = 'block'
-//             })
-//     }
-    
-// }
 
-// const slider1 = new Slider({
-//     selector: '.firstscreen'
 
-// })
-// const btnNext1 = new Slider({
-//     selector: '.btn-next'
-// })
+function validatePhone(phone) {
+    let re = /^[0-9\s]*$/;
+    return re.test(String(phone));
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementsByTagName('form');
-    form.addEventListener('submit', formSend);
+form.onsubmit = function () {
+    let emailVal = inputEmail.value,
+        phoneVal = inputPhone.value,
+        emptyInputs = Array.from(formInputs).filter(input => input.value === '');
 
-    async function formSend(e) {
-        e.preventDefault();
+    formInputs.forEach(function (input) {
+        if (input.value === '') {
+            input.classList.add('error');
 
-        let error = formValidate(form);
-        if(error = 0) {
-
-        }else {
-            alert('Заполните обязательное поле');
+        } else {
+            input.classList.remove('error');
         }
+    });
+
+    if (emptyInputs.length !== 0) {
+        console.log('inputs not filled');
+        return false;
     }
 
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req')
-
-        for(let i = 0; i < formReq.length; i++) {
-            const input = formReq[i];
-            formRemoveError(input);
-            if(input.classList.contains('_email')){
-                if (emailTest(input)) {
-                    formAddError(input);
-                    error++;
-                }else if(input.getAttribute("type" === 'checkbox' && input.checked === false)){
-                    formAddError(input);
-                    error++;
-                }else {
-                    if (input.value === '') {
-                        formAddError(input);
-                        error++;
-                    }
-                }
-            }
-        }
+    if(!validateEmail(emailVal)) {
+        console.log('email not valid');
+        inputEmail.classList.add('error');
+        return false;
+    } else {
+        inputEmail.classList.remove('error');
     }
 
-    function formAddError(input) {
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
+    if (!validatePhone(phoneVal)) {
+        console.log('phone not valid');
+        inputPhone.classList.add('error');
+        return false;
+    } else {
+        inputPhone.classList.remove('error');
     }
-    function formRemoveError(input) {
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    }
-    function emailTest(input) {
-        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-    }
-})
+    // Bro check
+    // if(!inputCheckbox.checked) {
+    //     console.log('checkbox not checked');
+    //     inputCheckbox.classList.add('error');
+    //     return false;
+    // } else {
+    //     inputCheckbox.classList.remove('error')
+    // }
+
+
+}
