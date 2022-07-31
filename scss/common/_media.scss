@@ -123,6 +123,16 @@
             }
         }
     }
+    .sale__contant{
+        justify-content: center;
+        align-items: center;
+        td{
+            padding: 1rem 5rem;
+        }
+        h3{
+            text-align: center;
+        }
+    }
 
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
