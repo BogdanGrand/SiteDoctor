@@ -133,6 +133,19 @@
             text-align: center;
         }
     }
+    .footer__inners{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .footer__inner{
+            text-align: center;
+        }
+        .footer__inner-main{
+            text-align: center;
+        }
+    }
 
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
@@ -140,6 +153,10 @@
    .container{
        max-width: 970px;
    }
+   .modal_window_form{
+       flex-wrap: wrap;
+   }
+
 }
 
 
@@ -154,13 +171,7 @@
     }
     .services__about__btn{
         margin-left: 0;
-    }
-  
-
-    // .top__info{
-    //     flex-wrap: wrap-reverse;
-    // }
-    
+    }  
 } 
 
 @media only screen and (max-width: 600px) {

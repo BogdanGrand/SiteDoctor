@@ -122,7 +122,7 @@
                     <div class="padding"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <button class = "button lang" key="more">Докладніше</button>
+                <button class = "button lang" key="more"><a href="sale.html">Докладніше</a></button>
             </div>
         </section>
 
@@ -328,7 +328,7 @@
                                     <button type="submit" class="btn_general btn-next lang" key="next">Далі</button>
                                 </div>
                             </div>
-                            <div class="g-maps"></div>
+                            <div id="map" class="maps"></div>
                         </div>
                     </div>
                 </form>
@@ -417,78 +417,9 @@
                 </div>
             </div>
         </footer>
-
-        <section>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer_nav">
-                        <div class="row_service">
-                            <h3>Меню</h3>
-                            <ul>
-                                <a href="#"><li>
-                                    Про лікаря
-                                </li></a>
-                                <a href="#"><li>
-                                    Акції
-                                </li></a>
-                                <a href="#"><li>
-                                    Послуги
-                                </li></a>
-                                <a href="#">
-                                    <li>Відгуки</li>
-                                </a>
-                                <a href="#"><li>
-                                    Фотогалерея
-                                </li></a>
-                                <a href="#"><li>
-                                    Контакти
-                                </li></a>
-                            </ul>
-                        </div>
-                        <div class="row_service">
-                            <h3>Послуги</h3>
-                            <ul>
-                                <a href="#"><li>
-                                    Косметологія
-                                </li></a>
-                                <a href="#"><li>
-                                    Дерматологія
-                                </li></a>
-                                <a href="#"><li>
-                                    Трихологія
-                                </li></a>
-                                <a href="#"><li>
-                                    Венерологія
-                                </li></a>
-                            </ul>
-                        </div>
-                        <div class="row_service">
-                            <h3>Про лікаря</h3>
-                            <ul>
-                                <a href="#"><li>
-                                    Сертифікати
-                                </li></a>
-                                <a href="#"><li>
-                                    Освіта
-                                </li></a>
-                                <a href="#"><li>
-                                    Досвід
-                                </li></a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer_feedback">
-                        <div class="row_service">
-                            <p>Зв'яжіться з нами</p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </section>
-
     </div>
 
-    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjQBimd1baGcLRLXR3tZyjaYwOHx6uTGg&callback=initMap"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/gallery_swiper.js"></script>
     <script src="script.js"></script>

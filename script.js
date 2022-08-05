@@ -69,4 +69,17 @@ var swiper = new Swiper('.swiper__sale-page', {
   
 });
 
+function initMap() {
+  var opt = {
+    center: {lat:50.501642, lng: 30.425902},
+    zoom: 16
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), opt)
+  var marker = new google.maps.Marker({
+    position: {lat:50.501642, lng: 30.425902},
+    map: map
+  })
+}
+
 console.log(`Дивишся код,ахах лох))`);

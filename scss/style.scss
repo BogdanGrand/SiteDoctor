@@ -40,6 +40,11 @@ html,
     border: none;  
     position: relative;
     overflow: hidden;
+    a{
+        font-size: 24px;
+        color: #FFFFFF;
+        font-weight: 400;
+    }
     &::before{
         content: ""; 
         position: absolute; 
@@ -646,11 +651,11 @@ padding-bottom: 40px;
 }
 .modal_window_form{
     display: flex;
-    flex-wrap: wrap;
+    gap: 2rem;
     background-color: #fff;
+    justify-content: space-between;
     .container_modal_form{
-        // margin: 15px 50px;
-        max-width: 669px;
+        flex: 1 1 25rem;
         .welcome_form{
             text-align: center;
             margin: 65px 0 50px;
@@ -676,10 +681,8 @@ padding-bottom: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // border: 1px solid black;
                 flex-wrap: wrap;
                 gap: 20px;
-                // margin: 20px 115px;
                 .block_form_input{
                     transition: all 0.7s ease 0s;
                     border-radius: 20px;
@@ -746,23 +749,15 @@ padding-bottom: 40px;
             }
         }
     }
-    .g-maps{
-        background-color: aqua;
-        border: 1px solid black;
-        max-width: 500px;
+    .maps{
+        width: 100%;
+        flex: 1 1 25rem;
     }
 }
 
 // footer content
 
-.footer{
-    background: #283D6A;
-    color: white;
-    border-radius: 8px 8px 0 0;
-    li{
-        color: white;
-    }
-}
+
 .footer_nav{
     display: flex;
     justify-content: space-between;
@@ -980,6 +975,114 @@ padding-bottom: 40px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                .swiper-box{
+                    position: relative;
+                    p{
+                        position: absolute;
+                        bottom:0;
+                        left:0;
+                        padding: 15px;
+                        color: #FFFFFF;
+                        font-size: 18px;
+                        font-family: 'Raleway';
+                        text-transform: uppercase;
+                        z-index: 5;
+                        line-height: 23px;
+                    }
+                    span{
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                }    
+                img{
+                    border-radius: 5%;
+                    object-fit: cover;
+                }
+                .img__wrapper{
+                    position: relative;
+                    border-radius: 5%;
+                    -webkit-box-shadow: 6px 9px 8px 1px rgba(0,0,0,0.68); 
+                    box-shadow: 6px 9px 8px 1px rgba(0,0,0,0.68);
+                }
+                .img__wrapper::after{
+                    content: '';
+                    top:0;
+                    left:0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 10%;
+                    background-color: #000000;
+                    z-index: 2;
+                    border-radius: 5%;
+                    transition: 1s ease;
+                }
+                .before__one::before{
+                    content: '';
+                    top:0;
+                    left:10px;
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url('../img/elements/Group\ 1.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    z-index: 3;
+                    transition: 1s ease;
+                }
+                .before__second::before{
+                    content: '';
+                    top:0;
+                    left:10px;
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url('../img/elements/seventy.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    z-index: 3;
+                    transition: 1s ease;
+                }
+                .before__third::before{
+                    content: '';
+                    top:0;
+                    left:10px;
+                    padding: 5px;
+                    position: absolute;
+                    width: 120px;
+                    height: 120px;
+                    background-image: url('../img/elements/sale.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    z-index: 3;
+                    transition: 1s ease;
+                }
+                .before__four::before{
+                    content: '';
+                    top:10px;
+                    left:10px;
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url('../img/elements/Group\ 1.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    z-index: 3;
+                    transition: 1s ease;
+                }  
+                .img__wrapper:hover:after{
+                    opacity: 70%;
+                }
+                .img__wrapper:hover:before{
+                    width: 140px;
+                    height: 140px;
+                    left: 20px;
+                }
             }
         }
         .first,
@@ -1079,10 +1182,10 @@ padding-bottom: 40px;
         display: flex;
         justify-content: space-between;
         padding: 92px 0;
+        flex-wrap: wrap;
+        gap: 2rem;
         .footer__inner-main{
-            // flex-grow: 2;
-            // text-align: end;
-            padding-left: 150px;
+            
             p{
                 font-family: 'Raleway';
                 font-style: normal;
@@ -1135,9 +1238,14 @@ padding-bottom: 40px;
                 color: #79c8d6;
             }
         }
+        .footer__inner:nth-child(3){
+            flex-grow: 2;
+            
+        }
 
     }
 }
+
 // @import 'common/media';
 
 
